@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'd6xjzxe2c&xdo%x!de%)_gw0xpm_%rf(yzr+m0q)$nl0-l7v%='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -115,12 +115,12 @@ STATICFILES_DIRS=[
 ]
 # print(os.path.join(BASE_DIR, 'static'))
 # /home/nnn/django1/tiantian/static
+STATIC_ROOT='/var/www/tiantian/static/'
 
+# 开发阶段文件上传目录
+# MEDIA_ROOT=os.path.join(BASE_DIR,'static')
+# 部署阶段文件上传目录
 
-#开发阶段文件上传目录
-MEDIA_ROOT=os.path.join(BASE_DIR,'static')
-#部署阶段文件上传目录
-# MEDIA_ROOT='/var/www/dailyfresh/static'
 
 TINYMCE_DEFAULT_CONFIG = {
     'theme': 'advanced',
